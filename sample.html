@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>jQuery Overlay plugin</title>
+    <script src="http://www.google.com/jsapi"></script>
+    <script>
+      google.load("jquery", "1");
+    </script>
+
+    <script src="./modal.js"></script>
+    <script>
+      $(document).ready(function () {
+        // startボタンがクリックされたらモーダルダイアログ開始
+        $("#start1").click(function () {
+          $("#modal1").showModal("#modal1");
+        });
+        $("#start2").click(function () {
+          $("#modal2").showModal("#modal2");
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div>
+      <input id="start1" type="button" value="Start Modal1">
+      <input id="start2" type="button" value="Start Modal2">
+    </div>
+
+    <div id="modal1" style="display: none">
+      <p>hoge</p>
+      <input type="button" value="モーダルを閉じる" onclick="$('#modal1').hideModal()">
+    </div>
+    <div id="modal2" style="display: none">
+      <p>fuga</p>
+    </div>
+  </body>
+</html>
