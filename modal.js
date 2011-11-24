@@ -17,7 +17,7 @@
   /**
    * モーダルダイアログを表示する
    */
-  $.fn.showModal = function (id, options) {
+  $.fn.showModal = function (options) {
 
     var self = this;
 
@@ -55,7 +55,7 @@
     // 閉じるボタン
     var close = $("<div class='close'><p style='text-align: right'><a href='javascript:$(self).hideModal()'>Close</a></p></div>");
     // DOMをコピー
-    var dom = $(id).clone(true);
+    var dom = this.clone(true);
     dom.css("display", "block");
     // ベースに追加
     base.append(close);

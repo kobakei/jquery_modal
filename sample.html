@@ -11,10 +11,15 @@
       $(document).ready(function () {
         // startボタンがクリックされたらモーダルダイアログ開始
         $("#start1").click(function () {
-          $("#modal1").showModal("#modal1");
+          $("#modal1").showModal();
         });
         $("#start2").click(function () {
-          $("#modal2").showModal("#modal2");
+          $("#modal2").showModal({
+            width: 300,
+            height: 200,
+            opacity: 0.1,
+            background_color: 'red'
+          });
         });
       });
     </script>
@@ -23,7 +28,7 @@
   <body>
     <div>
       <input id="start1" type="button" value="Start Modal1">
-      <input id="start2" type="button" value="Start Modal2">
+      <input id="start2" type="button" value="Start Modal2(with options)">
     </div>
 
     <div id="modal1" style="display: none">
